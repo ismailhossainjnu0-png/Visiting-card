@@ -63,9 +63,9 @@
 <body>
 
 <div class="card">
-    <img src="https://via.placeholder.com/100" alt="Profile" class="profile-img">
+    <img src="my-photo.jpg"alt="Profile" class="profile-img">
     
-    <h2>আপনার নাম</h2>
+    <h2>Ismail Hossain</h2>
     <p>ওয়েব ডেভেলপার ও উদ্যোক্তা</p>
     
     <div class="info">
