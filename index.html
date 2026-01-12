@@ -3,27 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ismail's Digital Card</title>
+    <title>Ismail's Animated Card</title>
     <style>
-        body { background: #f4f4f9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: sans-serif; }
-        .card { background: #2c3e50; color: white; width: 320px; padding: 25px; border-radius: 15px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
-        .logo { width: 80px; height: 80px; background: #e67e22; color: white; font-size: 35px; line-height: 80px; border-radius: 50%; margin: 0 auto 15px; font-weight: bold; border: 3px solid #fff; }
-        h2 { margin: 10px 0; font-size: 22px; color: #f39c12; }
-        p { font-size: 14px; opacity: 0.8; margin-bottom: 20px; }
-        .contact { text-align: left; font-size: 13px; background: rgba(255,255,255,0.1); padding: 10px; border-radius: 8px; }
-        .contact div { margin: 5px 0; }
+        /* এনিমেশন সেটআপ */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body { 
+            background: #1a1a2e; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            font-family: 'Segoe UI', sans-serif; 
+        }
+
+        .card { 
+            background: #16213e; 
+            color: white; 
+            width: 320px; 
+            padding: 30px; 
+            border-radius: 20px; 
+            text-align: center; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4); 
+            border: 1px solid rgba(255,255,255,0.1);
+            /* এখানে এনিমেশনটি ব্যবহার করা হয়েছে */
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .logo { 
+            width: 80px; 
+            height: 80px; 
+            background: linear-gradient(45deg, #f39c12, #e67e22);
+            color: white; 
+            font-size: 35px; 
+            line-height: 80px; 
+            border-radius: 50%; 
+            margin: 0 auto 15px; 
+            font-weight: bold; 
+            border: 3px solid #fff;
+            box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
+        }
+
+        h2 { margin: 10px 0; font-size: 24px; color: #f39c12; }
+        p { font-size: 14px; opacity: 0.8; margin-bottom: 25px; letter-spacing: 1px; }
+
+        .contact { 
+            text-align: left; 
+            font-size: 14px; 
+            background: rgba(255,255,255,0.05); 
+            padding: 15px; 
+            border-radius: 12px; 
+        }
+
+        .contact div { margin: 10px 0; display: flex; align-items: center; }
+        
+        .whatsapp-btn {
+            display: block;
+            margin-top: 20px;
+            padding: 12px;
+            background: #25d366;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .whatsapp-btn:hover { background: #128c7e; transform: scale(1.02); }
     </style>
 </head>
 <body>
     <div class="card">
         <div class="logo">IH</div>
         <h2>ইসমাইল হোসেন</h2>
-        <p>ওয়েব ডেভেলপার</p>
+        <p>প্রফেশনাল ওয়েব ডেভেলপার</p>
         <div class="contact">
-            <div>📧 ইমেইল: ismailhossainjnu0@gmail.com</div>
-            <div>📞 ফোন: +৮৮০ ০১৩৩২৩০০৩৫৮</div>
-            <div>📍 ঠিকানা: ঢাকা, বাংলাদেশ</div>
+            <div>📧 ismailhossain@example.com</div>
+            <div>📞 +৮৮০ ১৭XXXXXXXX</div>
+            <div>📍 ঢাকা, বাংলাদেশ</div>
         </div>
+        <a href="https://wa.me/88017XXXXXXXX" class="whatsapp-btn">WhatsApp এ মেসেজ দিন</a>
     </div>
 </body>
 </html>
