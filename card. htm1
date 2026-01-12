@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ডিজিটাল ভিজিটিং কার্ড</title>
+    <style>
+        body { background: #f0f2f5; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        /* কার্ডের মূল ডিজাইন */
+        .card {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            width: 350px;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        h2 { margin: 10px 0 5px; font-size: 24px; }
+        p { font-size: 14px; opacity: 0.9; margin-bottom: 20px; }
+
+        .info { text-align: left; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; }
+        .info div { margin-bottom: 8px; font-size: 13px; }
+        
+        .social-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #f39c12;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .social-btn:hover { background: #e67e22; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <img src="https://via.placeholder.com/100" alt="Profile" class="profile-img">
+    
+    <h2>আপনার নাম</h2>
+    <p>ওয়েব ডেভেলপার ও উদ্যোক্তা</p>
+    
+    <div class="info">
+        <div>📧 ইমেইল: example@mail.com</div>
+        <div>📞 ফোন: +৮৮০ ১৭০০-০০০০০০</div>
+        <div>📍 ঠিকানা: ঢাকা, বাংলাদেশ</div>
+    </div>
+    
+    <a href="#" class="social-btn">যোগাযোগ করুন</a>
+</div>
+
+</body>
+</html>
